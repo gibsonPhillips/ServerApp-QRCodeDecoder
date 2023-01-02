@@ -1,0 +1,35 @@
+Project 1 - QR decoder server and client C applications
+Authors: Gibson Phillips and Seth Frank
+
+------------------------------------------------------------------------------------------
+
+SAMPLE COMMANDS
+	These are the recommended commands you can copy and paste in to get things working. Please use these as reference. 
+gcc server.c
+./a.out <listening-port> <rate-limit> <max-users> <time-limit>
+./a.out 2012 3 3 80
+
+gcc client.c
+./a.out <server-ip-address> <listening-port>
+./a.out "Your server's ip address" 2012
+
+------------------------------------------------------------------------------------------
+
+SETUP
+The server.c file needs to be compiled with gcc on a virtual machine(VM) and run with the parameters of [port-number] [rate-limit] [Max-Users] and [Time-out]
+The client.c file should also be compiled and run in a different VM with the parameters of [server-ip-address] and [port-number]
+You should make sure that the server-ip-address option matches the address to the current system running the server.c application. 
+IP addresses can be found with the command "ifconfig"
+Please also make sure that the port numbers are the same, otherwise the client and server apps won't be able to find eachother. 
+
+------------------------------------------------------------------------------------------
+
+USAGE
+Once the client connects to the server, you are prompted for the name of a png file. 
+The PNG file must be in the directory you are in before you run the client-side app. 
+We have included a png of a qr code, but you are welcome to try your own. The one provided in the project checkpoint should also work. 
+
+As the prompt will also explain, send "close" to close your connection to the server, and "disconnect" to shut down the connection and the server as a whole. 
+
+
+------------------------------------------------------------------------------------------
